@@ -15,7 +15,7 @@
   <h2>Landmarks</h2>
   <ul>
     <% Landmark.each do |landmark| %>
-
+      <input type="checkbox" name="landmarks[]" value="<%=landmark.id%>" id="<%=landmark.name%>">
     <% end %>
   </ul>
   <input type="submit">
