@@ -12,7 +12,7 @@
   <h2>Create New Title</h2>
   <input type="text" name="title">
 
-  <h3>Landmarks</h3>
+  <h3>Figures</h3>
 
   <% Figure.all.each do |figure| %>
     <input type="checkbox" name="figures[]" value="<%=figure.id%>" id="<%=figure.name%>"><%=figure.name%><br>
