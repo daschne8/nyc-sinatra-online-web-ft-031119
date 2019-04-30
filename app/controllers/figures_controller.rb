@@ -15,8 +15,11 @@ class FiguresController < ApplicationController
     @figure.landmarks << @landmark
     @figure.titles << @title
     @figure.save
-    binding.pry
-    puts "test"
+    redirect "/figures/#{}"
+  end
+
+  get '/figures/:id' do
+
   end
 
 
