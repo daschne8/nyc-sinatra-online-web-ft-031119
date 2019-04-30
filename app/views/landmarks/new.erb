@@ -3,7 +3,7 @@
 <form action="/landmarks" method="post">
   Name <input type="text" name="name"><br>
 
-  Titles<br>
+  <h3>Titles</h3>
 
   <% Title.all.each do |title| %>
     <input type="checkbox" name="titles[]" value="<%=title.id%>" id="<%=title.name%>"><%=title.name%><br>
