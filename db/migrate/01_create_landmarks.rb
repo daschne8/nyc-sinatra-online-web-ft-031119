@@ -7,6 +7,4 @@ class CreateLandmarks < ActiveRecord::Migration[5.2]
       t.integer :year_completed
     end
   end
-
-
 end
