@@ -1,6 +1,16 @@
 <h2>Create New Landmark</h2>
 
-<!-- add content here -->
+<form action="/landmarks" method="post">
+  Name <input type="text" name="name">
+
+  Titles
+  <ul>
+    <% Title.each do |title|%>
+      
+    <% end %>
+  </ul>
+  <input type="submit">
+</form>
 
 <a class="button" href="/figures">Landmarks</a>
 <a class="button" href="/">Home</a>
