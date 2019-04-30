@@ -8,6 +8,16 @@ class FiguresController < ApplicationController
     erb :'/figures/new'
   end
 
+  get '/figures/:id' do
+    @figure = Figure.find_by_id(params[:id])
+    erb :'/figures/show'
+  end
+
+  get 'figures/:id/edit' do
+    @figure = Figure.find_by_id(params[:id])
+    erb :'/figures/edit'
+  end
+
   post '/figures' do
     if !params[:title].empty?
       @title = Title.create(params[:title])
@@ -22,15 +32,7 @@ class FiguresController < ApplicationController
     redirect "/figures/#{@figure.id}"
   end
 
-  get '/figures/:id' do
-    @figure = Figure.find_by_id(params[:id])
-    erb :'/figures/show'
-  end
 
-  get 'figures/:id/edit' do
-    @figure = Figure.find_by_id(params[:id])
-    erb :'/figures/edit'
-  end
 
   patch '/figures' do
     binding.pry
