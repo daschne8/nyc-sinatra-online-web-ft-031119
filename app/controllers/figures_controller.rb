@@ -32,7 +32,8 @@ class FiguresController < ApplicationController
     redirect "/figures/#{@figure.id}"
   end
 
-  patch '/figures' do
+  patch '/figures/:id' do
+
     binding.pry
     puts "test"
   end
