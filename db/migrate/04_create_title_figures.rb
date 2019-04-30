@@ -1,4 +1,4 @@
-class CreateTitleFigures < ActiveRecord::Migration[5.2]
+class CreateTitleFigures < ActiveRecord::Migration
   def change
     create_table :title_figures do |t|
       t.integer :title_id
