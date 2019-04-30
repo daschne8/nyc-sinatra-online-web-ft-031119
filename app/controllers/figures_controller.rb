@@ -4,5 +4,10 @@ class FiguresController < ApplicationController
     erb :'/figures/new'
   end
 
+  post '/figures' do
+    binding.pry
+    puts "test"
+  end
+
 
 end
