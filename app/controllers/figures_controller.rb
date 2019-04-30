@@ -12,6 +12,9 @@ class FiguresController < ApplicationController
       @landmark = Landmark.create(params[:landmark])
     end
     @figure = Figure.create(params[:figure])
+    @figure.landmarks << @landmark
+    @figure.titles << @title
+    @figure.save
     binding.pry
     puts "test"
   end
