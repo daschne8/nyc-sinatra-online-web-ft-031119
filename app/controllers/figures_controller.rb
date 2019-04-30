@@ -15,11 +15,11 @@ class FiguresController < ApplicationController
     @figure.landmarks << @landmark
     @figure.titles << @title
     @figure.save
-    redirect "/figures/#{}"
+    redirect "/figures/#{@figure.id}"
   end
 
   get '/figures/:id' do
-
+    erb :'/figures/show'
   end
 
 
