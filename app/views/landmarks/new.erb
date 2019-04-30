@@ -1,12 +1,12 @@
 <h2>Create New Landmark</h2>
 
 <form action="/landmarks" method="post">
-  Name <input type="text" name="name">
+  Name <input type="text" name="name"><br>
 
-  Titles
+  Titles<br>
   <ul>
     <% Title.each do |title|%>
-
+      <input type="checkbox" name="titles[]" value="<%=title.id%>" id="<%=title.name%>">
     <% end %>
   </ul>
   <input type="submit">
