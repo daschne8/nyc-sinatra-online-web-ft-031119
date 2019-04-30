@@ -4,20 +4,20 @@
   Name <input type="text" name="name"><br>
 
   Titles<br>
-  
+
   <% Title.all.each do |title| %>
     <input type="checkbox" name="titles[]" value="<%=title.id%>" id="<%=title.name%>"><%=title.name%><br>
   <% end %>
-  
+
   <h2>Create New Title</h2>
   <input type="text" name="title">
 
   <h2>Landmarks</h2>
-  
+
   <% Landmark.all.each do |landmark| %>
     <input type="checkbox" name="landmarks[]" value="<%=landmark.id%>" id="<%=landmark.name%>"><%=landmark.name%><br>
   <% end %>
-  
+
   <input type="submit">
 </form>
 
